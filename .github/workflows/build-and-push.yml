@@ -108,7 +108,7 @@ jobs:
       - name: Prepare
         id: prepare
         run: |
-          DOCKER_IMAGE=1panel/maxkb
+          DOCKER_IMAGE=orzwq/maxkb
           DOCKER_PLATFORMS=${{ github.event.inputs.architecture }}
           TAG_NAME=${{ github.event.inputs.dockerImageTag }}
           if [[ ${TAG_NAME} == *dev* ]]; then
