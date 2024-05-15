@@ -58,6 +58,7 @@ self_llm_model_credential = SelfLLMModelCredential()
 
 model_dict = {
     'lilinger': ModelInfo('lilinger', 'lilinger测试专用', ModelTypeConst.LLM, self_llm_model_credential),
+    'phi-3': ModelInfo('phi-3', 'phi-3测试专用', ModelTypeConst.LLM, self_llm_model_credential),
 }
 
 
@@ -74,8 +75,6 @@ class SelfModelProvider(IModelProvider):
         # )
 
         llm = VLLMChatModel(
-            # openai_api_key="token-abc123",
-            # openai_api_base="http://123.178.151.124:37725/v1",
             openai_api_key=model_credential.get('api_key'),
             openai_api_base=model_credential.get('api_base'),
             model_name=model_name,
