@@ -22,8 +22,8 @@ from common.util.field_message import ErrMessage
 
 class ModelField(serializers.Field):
     def to_internal_value(self, data):
-        if not isinstance(data, BaseChatModel):
-            self.fail('模型类型错误', value=data)
+        # if not isinstance(data, BaseChatModel):
+        #     self.fail('模型类型错误', value=data)
         return data
 
     def to_representation(self, value):
