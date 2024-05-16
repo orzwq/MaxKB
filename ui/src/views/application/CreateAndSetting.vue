@@ -38,7 +38,7 @@
                 <el-input
                   v-model="applicationForm.desc"
                   type="textarea"
-                  placeholder="描述该角色的角色场景及用途，如：MaxKB 小助手回答用户提出的 MaxKB 产品使用问题"
+                  placeholder="描述该角色的角色场景及用途，如：用于创建智能 NPC "
                   :rows="3"
                   maxlength="256"
                   show-word-limit
@@ -314,10 +314,10 @@ const applicationForm = ref<ApplicationFormType>({
   desc: '',
   model_id: '',
   multiple_rounds_dialogue: false,
-  prologue: `您好，我是 MaxKB 小助手，您可以向我提出 MaxKB 使用问题。
-- MaxKB 主要功能有什么？
-- MaxKB 支持哪些大语言模型？
-- MaxKB 支持哪些文档类型？`,
+  prologue: `您好，我是 角色 小助手，您可以向我提出 角色 相关问题。
+- 你的名字是什么？
+- 你有哪些爱好？
+- 你的父亲是谁？`,
   dataset_id_list: [],
   dataset_setting: {
     top_n: 3,

@@ -18,7 +18,7 @@ const guideHtml=`
   </div>
  
   <div class="maxkb-title"> 🌟 遇见问题，不再有障碍！</div>
-  <p>你好，我是你的智能小助手。<br/>
+  <p>你好，我是你的智能角色。<br/>
       点我，开启高效解答模式，让问题变成过去式。</p>
   <div class="maxkb-button">
       <button>我知道了</button>

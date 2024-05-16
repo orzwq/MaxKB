@@ -165,7 +165,7 @@ const noReferencesformRef = ref()
 const defaultValue = {
   ai_questioning: '{question}',
   designated_answer:
-    '你好，我是 MaxKB 小助手，我的知识库只包含了 MaxKB 产品相关知识，请重新描述您的问题。'
+    '你好，我的经历没有这些内容，请重新描述您的问题。'
 }
 
 const form = ref<any>({
