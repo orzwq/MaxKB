@@ -28,8 +28,8 @@ class BaseGenerateHumanMessageStep(IGenerateHumanMessageStep):
                 padding_problem_text: str = None,
                 no_references_setting=None,
                 **kwargs) -> List[BaseMessage]:
-        # prompt = prompt if (paragraph_list is not None and len(paragraph_list) > 0) else no_references_setting.get(
-        #     'value')
+        prompt = prompt if (paragraph_list is not None and len(paragraph_list) > 0) else no_references_setting.get(
+            'value')
         exec_problem_text = padding_problem_text if padding_problem_text is not None else problem_text
         start_index = len(history_chat_record) - dialogue_number
         history_message = [[history_chat_record[index].get_human_message(), history_chat_record[index].get_ai_message()]
@@ -46,14 +46,14 @@ class BaseGenerateHumanMessageStep(IGenerateHumanMessageStep):
                          paragraph_list: List[ParagraphPipelineModel],
                          no_references_setting: Dict):
         if paragraph_list is None or len(paragraph_list) == 0:
-            # if no_references_setting.get('status') == 'ai_questioning':
-            #     return HumanMessage(
-            #         content=no_references_setting.get('value').format(**{'question': problem}))
-            # else:
-            #     return HumanMessage(content=prompt.format(**{'data': "", 'question': problem}))
+            if no_references_setting.get('status') == 'ai_questioning':
+                return HumanMessage(
+                    content=no_references_setting.get('value').format(**{'question': problem}))
+            else:
+                return HumanMessage(content=prompt.format(**{'data': "", 'question': problem}))
 
-            content = prompt.format(**{'data': "", 'question': problem}).replace('\n', '')
-            return HumanMessage(content=content) 
+            # content = prompt.format(**{'data': "", 'question': problem}).replace('\n', '')
+            # return HumanMessage(content=content) 
             # return HumanMessage(content=prompt.format(**{'data': "", 'question': problem}))
         temp_data = ""
         data_list = []
@@ -67,6 +67,6 @@ class BaseGenerateHumanMessageStep(IGenerateHumanMessageStep):
             else:
                 data_list.append(f"<data>{content}</data>")
         data = "\n".join(data_list)
-        content = prompt.format(**{'data': data, 'question': problem}).replace('\n', '')
-        return HumanMessage(content=content) 
-        # return HumanMessage(content=prompt.format(**{'data': data, 'question': problem}))
+        # content = prompt.format(**{'data': data, 'question': problem}).replace('\n', '')
+        # return HumanMessage(content=content) 
+        return HumanMessage(content=prompt.format(**{'data': data, 'question': problem}))

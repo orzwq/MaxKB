@@ -22,14 +22,14 @@ from setting.models_provider.impl.self_model_provider.self_model_provider import
 
 
 class ModelProvideConstants(Enum):
-    model_azure_provider = AzureModelProvider()
-    model_wenxin_provider = WenxinModelProvider()
-    model_ollama_provider = OllamaModelProvider()
+    # model_azure_provider = AzureModelProvider()
+    # model_wenxin_provider = WenxinModelProvider()
+    # model_ollama_provider = OllamaModelProvider()
     model_openai_provider = OpenAIModelProvider()
     model_kimi_provider = KimiModelProvider()
-    model_qwen_provider = QwenModelProvider()
-    model_zhipu_provider = ZhiPuModelProvider()
-    model_xf_provider = XunFeiModelProvider()
-    model_deepseek_provider = DeepSeekModelProvider()
-    model_gemini_provider = GeminiModelProvider()
+    # model_qwen_provider = QwenModelProvider()
+    # model_zhipu_provider = ZhiPuModelProvider()
+    # model_xf_provider = XunFeiModelProvider()
+    # model_deepseek_provider = DeepSeekModelProvider()
+    # model_gemini_provider = GeminiModelProvider()
     model_self_provider = SelfModelProvider()
