@@ -6,9 +6,9 @@ export default {
 
     },
     topbar: {
-        github: "项目地址",
-        wiki: "用户手册",
-        forum: "论坛求助",
+        // github: "项目地址",
+        // wiki: "用户手册",
+        // forum: "论坛求助",
         MenuItem: {
             application: "角色",
             dataset: "知识库",
@@ -16,7 +16,7 @@ export default {
         },
         avatar: {
             resetPassword: "修改密码",
-            about: "关于",
+            // about: "关于",
             logout: "退出",
             version:"版本号",
             dialog:{
