@@ -53,9 +53,12 @@ def event_content(response,
     all_text = ''
     try:
         for chunk in response:
-            all_text += chunk.content
+            # all_text += chunk.content
+            # yield 'data: ' + json.dumps({'chat_id': str(chat_id), 'id': str(chat_record_id), 'operate': True,
+            #                              'content': chunk.content, 'is_end': False}) + "\n\n"
+            all_text += chunk
             yield 'data: ' + json.dumps({'chat_id': str(chat_id), 'id': str(chat_record_id), 'operate': True,
-                                         'content': chunk.content, 'is_end': False}) + "\n\n"
+                                         'content': chunk, 'is_end': False}) + "\n\n"
 
         # 获取token
         if is_ai_chat:

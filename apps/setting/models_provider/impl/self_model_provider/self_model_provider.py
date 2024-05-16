@@ -57,8 +57,8 @@ class SelfLLMModelCredential(BaseForm, BaseModelCredential):
 self_llm_model_credential = SelfLLMModelCredential()
 
 model_dict = {
-    'lilinger': ModelInfo('lilinger', 'lilinger测试专用', ModelTypeConst.LLM, self_llm_model_credential),
     'phi-3': ModelInfo('phi-3', 'phi-3测试专用', ModelTypeConst.LLM, self_llm_model_credential),
+    'Qwen-14B-Chat': ModelInfo('Qwen-14B-Chat', 'Qwen-14B-Chat测试专用', ModelTypeConst.LLM, self_llm_model_credential),
 }
 
 
