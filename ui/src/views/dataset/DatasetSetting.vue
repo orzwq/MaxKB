@@ -52,7 +52,7 @@
             </el-form-item>
           </el-form>
 
-          <h4 class="title-decoration-1 mb-16">关联应用</h4>
+          <h4 class="title-decoration-1 mb-16">关联角色</h4>
 
           <el-row :gutter="12">
             <el-col :span="12" v-for="(item, index) in application_list" :key="index" class="mb-16">

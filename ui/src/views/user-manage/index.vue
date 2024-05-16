@@ -134,7 +134,7 @@ function createUser() {
 function deleteUserManage(row: any) {
   MsgConfirm(
     `是否删除用户：${row.username} ?`,
-    `删除用户，该用户创建的资源（应用、知识库、模型）都会删除，请谨慎操作。`,
+    `删除用户，该用户创建的资源（角色、知识库、模型）都会删除，请谨慎操作。`,
     {
       confirmButtonText: '删除',
       confirmButtonClass: 'danger'

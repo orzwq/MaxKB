@@ -1,7 +1,7 @@
 <template>
   <div class="application-list-container p-24" style="padding-top: 16px">
     <div class="flex-between mb-16">
-      <h3>应用</h3>
+      <h3>角色</h3>
       <el-input
         v-model="searchValue"
         @change="searchHandle"
@@ -22,7 +22,7 @@
       >
         <el-row :gutter="15">
           <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4" class="mb-16">
-            <CardAdd title="创建应用" @click="router.push({ path: '/application/create' })" />
+            <CardAdd title="创建角色" @click="router.push({ path: '/application/create' })" />
           </el-col>
           <el-col
             :xs="24"
@@ -126,7 +126,7 @@ function getAccessToken(id: string) {
 }
 
 function deleteApplication(row: any) {
-  MsgConfirm(`是否删除应用：${row.name} ?`, `删除后该应用将不再提供服务，请谨慎操作。`, {
+  MsgConfirm(`是否删除角色：${row.name} ?`, `删除后该角色将不再提供服务，请谨慎操作。`, {
     confirmButtonText: '删除',
     confirmButtonClass: 'danger'
   })

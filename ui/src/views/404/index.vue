@@ -3,7 +3,7 @@
     <el-col class="img" :xs="0" :sm="0" :md="12" :lg="12" :xl="12"> </el-col>
     <el-col class="message-container" :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
       <div class="title">404</div>
-      <div class="message">很抱歉，无法访问应用！</div>
+      <div class="message">很抱歉，无法访问角色！</div>
       <!-- TODO 暂时不处理 -->
       <!-- <div class="operate"><el-button type="primary" @click="router.push('/')">返回首页</el-button></div> -->
     </el-col>

@@ -37,7 +37,7 @@ import { type ApplicationFormType } from '@/api/type/application'
 const props = withDefaults(
   defineProps<{
     /**
-     * 应用信息
+     * 角色信息
      */
     application?: ApplicationFormType
     /**

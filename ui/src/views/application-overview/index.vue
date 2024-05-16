@@ -2,7 +2,7 @@
   <LayoutContainer header="概览">
     <el-scrollbar>
       <div class="main-calc-height p-24">
-        <h4 class="title-decoration-1 mb-16">应用信息</h4>
+        <h4 class="title-decoration-1 mb-16">角色信息</h4>
         <el-card shadow="never" class="overview-card" v-loading="loading">
           <div class="title flex align-center">
             <div

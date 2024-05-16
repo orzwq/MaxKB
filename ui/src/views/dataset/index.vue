@@ -60,7 +60,7 @@
                       <span class="bold">{{ numberFormat(item?.char_length) || 0 }}</span>
                       字符<el-divider direction="vertical" />
                       <span class="bold">{{ item?.application_mapping_count || 0 }}</span>
-                      关联应用
+                      关联角色
                     </div>
                     <div @click.stop>
                       <el-dropdown trigger="click">
@@ -135,7 +135,7 @@ function searchHandle() {
 function deleteDataset(row: any) {
   MsgConfirm(
     `是否删除知识库：${row.name} ?`,
-    `此知识库关联 ${row.application_mapping_count} 个应用，删除后无法恢复，请谨慎操作。`,
+    `此知识库关联 ${row.application_mapping_count} 个角色，删除后无法恢复，请谨慎操作。`,
     {
       confirmButtonText: '删除',
       confirmButtonClass: 'danger'

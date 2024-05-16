@@ -2,7 +2,7 @@ import Layout from '@/layout/main-layout/index.vue'
 const applicationRouter = {
   path: '/application',
   name: 'application',
-  meta: { title: '应用', permission: 'APPLICATION:READ' },
+  meta: { title: '角色', permission: 'APPLICATION:READ' },
   redirect: '/application',
   children: [
     {
@@ -20,7 +20,7 @@ const applicationRouter = {
     {
       path: '/application/:id',
       name: 'ApplicationDetail',
-      meta: { title: '应用详情', activeMenu: '/application' },
+      meta: { title: '角色详情', activeMenu: '/application' },
       component: Layout,
       hidden: true,
       children: [

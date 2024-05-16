@@ -95,7 +95,7 @@
                   @click="router.push({ path: '/application/create' })"
                 >
                   <el-button link>
-                    <el-icon class="mr-4"><Plus /></el-icon> 创建应用
+                    <el-icon class="mr-4"><Plus /></el-icon> 创建角色
                   </el-button>
                 </div>
               </template>

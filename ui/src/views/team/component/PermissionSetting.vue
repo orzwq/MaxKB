@@ -8,7 +8,7 @@
   />
   <div class="p-24 pt-0">
     <el-table :data="filterData" :max-height="tableHeight">
-      <el-table-column prop="name" :label="isApplication ? '应用名称' : '知识库名称'">
+      <el-table-column prop="name" :label="isApplication ? '角色名称' : '知识库名称'">
         <template #default="{ row }">
           <div class="flex align-center">
             <AppAvatar

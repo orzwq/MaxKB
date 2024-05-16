@@ -1,13 +1,13 @@
 <template>
   <LayoutContainer
-    :header="id ? '设置' : '创建应用'"
+    :header="id ? '设置' : '创建角色'"
     :back-to="id ? '' : '-1'"
     class="create-application"
   >
     <el-row v-loading="loading">
       <el-col :span="10">
         <div class="p-24 mb-16" style="padding-bottom: 0">
-          <h4 class="title-decoration-1">应用信息</h4>
+          <h4 class="title-decoration-1">角色信息</h4>
         </div>
         <div class="scrollbar-height-left">
           <el-scrollbar>
@@ -24,21 +24,21 @@
               <el-form-item prop="name">
                 <template #label>
                   <div class="flex-between">
-                    <span>应用名称 <span class="danger">*</span></span>
+                    <span>角色名称 <span class="danger">*</span></span>
                   </div>
                 </template>
                 <el-input
                   v-model="applicationForm.name"
                   maxlength="64"
-                  placeholder="请输入应用名称"
+                  placeholder="请输入角色名称"
                   show-word-limit
                 />
               </el-form-item>
-              <el-form-item label="应用描述">
+              <el-form-item label="角色描述">
                 <el-input
                   v-model="applicationForm.desc"
                   type="textarea"
-                  placeholder="描述该应用的应用场景及用途，如：MaxKB 小助手回答用户提出的 MaxKB 产品使用问题"
+                  placeholder="描述该角色的角色场景及用途，如：MaxKB 小助手回答用户提出的 MaxKB 产品使用问题"
                   :rows="3"
                   maxlength="256"
                   show-word-limit
@@ -235,7 +235,7 @@
       <el-col :span="14" class="p-24 border-l">
         <h4 class="title-decoration-1 mb-16">调试预览</h4>
         <div class="dialog-bg">
-          <h4 class="p-24">{{ applicationForm?.name || '应用名称' }}</h4>
+          <h4 class="p-24">{{ applicationForm?.name || '角色名称' }}</h4>
           <div class="scrollbar-height">
             <AiChat :data="applicationForm"></AiChat>
           </div>
@@ -336,7 +336,7 @@ const applicationForm = ref<ApplicationFormType>({
 })
 
 const rules = reactive<FormRules<ApplicationFormType>>({
-  name: [{ required: true, message: '请输入应用名称', trigger: 'blur' }],
+  name: [{ required: true, message: '请输入角色名称', trigger: 'blur' }],
   model_id: [
     {
       required: false,
